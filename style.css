@@ -1,0 +1,162 @@
+body {
+    background-color: #252525;
+}
+
+.container {
+    position: absolute;
+    background-color: rgb(36, 35, 35);
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 30px 30px 50px rgb(12, 12, 12);
+    border: 2px solid rgb(12, 12, 12);
+    width: 350px;
+    border-radius: 15px;
+}
+
+.container header {
+    color: aqua;
+    margin: 10px 20px;
+    padding: 15px 15px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 900;
+    border-bottom: 1px solid white;
+}
+
+.detail {
+    display: none;
+}
+
+.notFound {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.notFound img {
+    width: 50%;
+    margin-bottom: 10px;
+    margin-left: 85px;
+}
+
+.notFound h2 {
+    margin-left: 40px;
+}
+
+.error {
+    animation: shake .1s linear 10;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.inputBox input {
+    width: 75%;
+    padding: 13px 7px;
+    margin-left: 10px;
+    margin-top: 15px;
+    border-radius: 7px;
+    border: 1px solid rgb(63, 62, 62);
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.inputBox button {
+    padding: 13px 7px;
+    width: 48px;
+    border: none;
+    border-radius: 50%;
+    height: 48px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.imgBox {
+    display: flex;
+    justify-content: center;
+}
+
+.imgBox img {
+    width: 35%;
+}
+
+.value p {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: aqua;
+}
+
+.value p sup {
+    font-weight: 500;
+}
+
+.location {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+    position: absolute;
+    top: 69%;
+    left: 30%;
+}
+
+.location i {
+    color: aqua;
+}
+
+.weatherDetails {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid white;
+}
+
+.divider {
+    border: 1px solid white;
+}
+
+.weatherDetails :where(.humidity, .wind) {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.humidity i,
+.wind i {
+    color: aqua;
+    padding: 0 5px;
+}
+
+.humidity #humidity {
+    display: block;
+    margin-left: 27px;
+}
+
+.wind #wind {
+    display: block;
+    margin-left: 29px;
+}
